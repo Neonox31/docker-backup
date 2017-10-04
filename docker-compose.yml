@@ -11,8 +11,8 @@ services:
       - /media/ops/backups/docker/volumes:/backup
     environment:
       - TZ="Europe/Paris"
-      - VOLUMERIZE_SOURCE="/source"
-      - VOLUMERIZE_TARGET="file:///backup"
-      - VOLUMERIZE_JOBBER_TIME="0 0 2 * * *"
-      - VOLUMERIZE_FULL_IF_OLDER_THAN="7D"
+      - VOLUMERIZE_SOURCE=/source
+      - VOLUMERIZE_TARGET=file:///backup
+      - VOLUMERIZE_JOBBER_TIME=0 0 2 * * *
+      - VOLUMERIZE_FULL_IF_OLDER_THAN=7D
       - VOLUMERIZE_DUPLICITY_OPTIONS=--no-encryption --volsize 500
