@@ -7,7 +7,7 @@ services:
     restart: always
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /srv/docker:/source
+      - /srv:/source
       - /media/ops/backups/docker/volumes:/backup
     environment:
       - TZ="Europe/Paris"
